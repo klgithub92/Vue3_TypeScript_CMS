@@ -1,0 +1,21 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "auto-imports.d.ts",
+    "components.d.ts"
+  ],
+  "exclude": ["src/**/__tests__/*", "commitlint.config.js"],
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    // "noImplicitAny": false, // 配置不能有隐士的any
+    "moduleResolution": "node" // element-plus按需引入 类型提示
+    // "types": ["element-plus/global"] // 全局配置element-plus组件类型支持
+  }
+}
